@@ -31,7 +31,7 @@
 				z-index: 5;
 				transform: translate(-50%, -50%);
 			}
-			button[disabled='true'] {
+			button[data-disabled='true'] {
 				display: none;
 			}
 			p {
@@ -49,11 +49,11 @@
 		<script src="LibreTranslate.js"></script>
 		<script>
 			const fuck = async () => {
-				document.getElementById('b').setAttribute('disabled', true);
+				document.getElementById('b').setAttribute('data-disabled', true);
 				const v = document.getElementById('a').value;
 				const a = await window.rapeString(v);
 				document.getElementById('output').innerText = a;
-				document.getElementById('b').setAttribute('disabled', false);
+				document.getElementById('b').setAttribute('data-disabled', false);
 			};
 			window.fuck = fuck;
 		</script>
