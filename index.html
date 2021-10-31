@@ -48,12 +48,14 @@
 			}
 		</style>
 		<script src="LibreTranslate.js"></script>
+		<script src="/LibreTranslate.js"></script>
 		<script>
 			const fuck = async () => {
 				document.getElementById('b').setAttribute('data-disabled', true);
 				const v = document.getElementById('a').value;
-				const a = await window.rapeString(v);
-				document.getElementById('output').innerText = a;
+				const o = document.getElementById('output');
+				const a = await window.rapeString(v, a => (o.innerText = a));
+				o.innerText = a;
 				document.getElementById('b').setAttribute('data-disabled', false);
 			};
 			window.fuck = fuck;
